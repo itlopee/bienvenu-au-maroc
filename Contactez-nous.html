@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contactez-nous</title>
+<link rel="stylesheet" href="style1.css" type='text/css'>
+
+</head>
+
+<body>
+
+  <div class="gris">
+        <div id="social-bartender">
+        <a href="https://www.facebook.com/myriam.hamzaoui.90" >
+          <img src="image/fb.png"/ alt="" class="sh-sb-icon">
+        </a>
+        <a href="https://www.instagram.com/myriam.hmz/?hl=fr" >
+          <img src="image/insta.png"/ alt="" class="sh-sb-icon">
+        </a>
+        <a href="https://plus.google.com/u/0/118239442085003888764" class="sh-sb-link">
+          <img src="image/google.png" alt="" class="sh-sb-icon" />
+        </a>
+    </div><br />
+  </div>
+
+  <header>
+    <div class="container">
+      <h1>Bienvenue au Maroc</h1>
+    </div>
+  </header>
+
+    <nav class="nav">
+      <div class="container">
+        <ul>
+         <li><a href="index.html">Accueil</a></li>
+         <li><a href="HetG.html" >Histoire et Géographie</a></li>
+         <li><a href="Politique et Économie.html" >Politique et Économie</a></li>
+         <li><a href="Tourisme.html" >Tourisme</a></li>
+         <li><a href="Culture.html" >Culture</a></li>
+         <li><a href="Musique et Festival.html" >Musique et Festival</a></li>
+         <li><a href="Contactez-nous.html" >Contactez-nous</a></li>
+      </ul>
+      </div>
+  </nav>
+  <div class="container-content">
+     <div class="center1">
+      <div >
+         <form action="contact.php" method="post">
+             <p>Nom*</p>
+               <input type="text" name="Nom" class="In" size="35"/>  <?php if(isset($_POST['Nom']))echo($_POST['Nom']);?>
+                 <br />
+             <p>Prénom*</p>
+               <input type="text" name="PrEnom" class="In" size="35"/>  <?php if(isset($_POST['Prénom']))echo($_POST['Prénom']);?>
+                 <br />
+             <p>Email*</p>
+               <input type="text" name="Email" class="In" size="35"/>  <?php if(isset($_POST['Email']))echo($_POST['Email']);?>
+  			   <br />
+  		   <p>Sujet</p>
+  			 <input type="text" name="Sujet" class="In" size="35"/>  <?php if(isset($_POST['Sujet']))echo($_POST['Sujet']);?>
+  			 <br />
+  		   <p>Message*</p>
+  			 <textarea name="Message" rows="4" cols="50" class="In" ></textarea><?php if(isset($_POST['Message']))echo($_POST['Message']);?>
+  			 <br />
+  			<input type="submit" value="Envoyer" class="sub" /> <span style="color:red;"><?php echo $erreur;?></span> <span style="color:green;"><?php echo $info;?></span>
+
+         </form>
+     </div>
+     </div>
+  </div>
+    <footer>
+      <p> Hamzaoui Myriam 2015-2016</p>
+    </footer>
+
+
+
+
+</body>
+
+</html>
